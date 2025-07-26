@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commodity Price Prediction</title>
+    <link rel="stylesheet" href="predic.css">
+    <body background="https://i.redd.it/uclav2w49ch51.png"></body>
+</head>
+<body>
+    <div class="container">
+        <h1>Commodity Price Prediction</h1>
+        <form id="priceForm">
+            <label for="state">State:</label>
+            <select id="state" required>
+                <option value="">Select State</option>
+            </select>
+
+            <label for="district">District:</label>
+            <select id="district" required>
+                <option value="">Select District</option>
+            </select>
+
+            <label for="commodity">Commodity:</label>
+            <input type="text" id="commodity" placeholder="Enter Commodity Name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="month">Month:</label>
+            <select id="month" required>
+                <option value="">select month</option>
+            </select>
+
+            <label for="season">Season:</label>
+            <select id="season" required>
+                <option value="">select season</option>
+            </select>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="prediction.js"></script>
+</body>
+</html>

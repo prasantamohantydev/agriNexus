@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Register form</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <body background="login.jpg"></body>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <span class="rotate-bg"></span>
+        <span class="rotate-bg2"></span>
+
+        <div class="form-box login">
+            <h2 class="title animation" style="--i:0; --j:21">Login</h2>
+            <form action="#">
+                <div class="input-box animation" style="--i:1; --j:22">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box animation" style="--i:2; --j:23">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn animation" style="--i:3; --j:24">Login</button>
+                <div class="linkTxt animation" style="--i:5; --j:25">
+                    <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-text login">
+            <h2 class="animation" style="--i:0; --j:20">Welcome Back!</h2>
+            <p class="animation" style="--i:1; --j:21"></p>
+        </div>
+
+        <div class="form-box register">
+            <h2 class="title animation" style="--i:17; --j:0">Sign Up</h2>
+            
+            <div class="scrollable-container">
+                <form action="#">
+
+                    <div class="input-box animation" style="--i:18; --j:1">
+                        <input type="text" required>
+                        <label for="">First Name</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:19; --j:2">
+                        <input type="text" required>
+                        <label for="">Last Name</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:19; --j:2">
+                        <input type="text" required>
+                        <label for="">User Name</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:20; --j:3">
+                        <input type="tel" required>
+                        <label for="">Contact Number</label>
+                        <i class='bx bxs-phone'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:21; --j:4">
+                        <input type="email" required>
+                        <label for="">Email</label>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:22; --j:5">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <div class="input-box animation" style="--i:23; --j:6">
+                        <select required>
+                            <option value="" disabled selected>Select Language</option>
+                            <option value="od">Odia</option>
+                            <option value="en">English</option>
+                            <option value="hi">Hindi</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="zh">Chinese</option>
+                        </select>
+                        <label for="">Language</label>
+                        <i class='bx bxs-world'></i>
+                    </div>
+
+                    <button type="submit" class="btn animation" style="--i:24;--j:7">Sign Up</button>
+
+                    <div class="linkTxt animation" style="--i:25; --j:8">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="info-text register">
+            <h2 class="animation" style="--i:17; --j:0;">Welcome Back!</h2>
+            <p class="animation" style="--i:18; --j:1;"></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

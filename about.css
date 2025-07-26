@@ -1,0 +1,200 @@
+
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer demo {
+  fieldset {
+    grid-template-columns: 
+      var(--col-1, 1fr) 
+      var(--col-2, 1fr) 
+      var(--col-3, 1fr) 
+      var(--col-4, 1fr) 
+      var(--col-5, 1fr)
+    ;
+    
+    @media (prefers-reduced-motion: no-preference) {
+      transition: grid-template-columns 2s var(--ease-spring-5);
+    }
+    
+    &:has(label:nth-child(1) > input:checked) {
+      --col-1: 5fr;
+      --col-2: 3fr;
+    }
+    &:has(label:nth-child(2) > input:checked) {
+      --col-1: 2fr;
+      --col-2: 5fr;
+      --col-3: 2fr;
+    }
+    &:has(label:nth-child(3) > input:checked) {
+      --col-2: 2fr;
+      --col-3: 5fr;
+      --col-4: 2fr;
+    }
+    &:has(label:nth-child(4) > input:checked) {
+      --col-3: 2fr;
+      --col-4: 5fr;
+      --col-5: 2fr;
+    }
+    &:has(label:nth-child(5) > input:checked) {
+      --col-4: 3fr;
+      --col-5: 5fr;
+    }
+    
+    > label {
+      background-image: var(--_img);
+      background-position: center;
+      background-size: auto 125%;
+    }
+  }
+}
+
+@layer demo.support {
+  html {
+    background: var(--gradient-9);
+    block-size: 100%;
+  }
+  
+  body {
+    min-block-size: 100%;
+    display: grid;
+    place-content: center;
+    padding: var(--size-5);
+    gap: var(--size-5);
+  }
+  
+  fieldset {
+    inline-size: 80vw;
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 50vh;
+    gap: var(--size-3);
+    border: none;
+    
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+      
+      &:focus-within {
+        outline: 1px solid green;
+        outline-offset: 5px;
+      }
+      
+      > input {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+          color: #333;
+      }
+      
+      header {
+          background-color: rgb(124, 252, 133);
+          padding: 10px 0;
+      }
+      
+      nav ul {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+      }
+      
+      nav ul li {
+          margin: 0 15px;
+      }
+      
+      nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      
+      nav ul li a.active {
+          border-bottom: 2px solid #fff;
+      }
+      
+      .hero {
+          background: url('aboutSection.png') no-repeat center center/cover;
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          text-align: center;
+      }
+      
+      .hero-content h1 {
+          font-size: 48px;
+          margin: 0;
+          transition: color ease-in .5s ;
+      }
+      .hero-content h1:hover{
+          color:rgb(16, 219, 219);
+          
+      }
+      
+      .hero-content p {
+          font-size: 18px;
+          transition: color ease-in .5s ;
+      }
+      .hero-content p:hover{
+          color:rgb(134, 212, 222)
+      }
+      
+      .about-section {
+          padding: 20px;
+          background-color: #fff;
+      }
+      
+      .about-section .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      
+      .about-section h2 {
+          color: #0066cc;
+          font-size: 32px;
+          margin-top: 20px;
+      }
+      
+      footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          margin-top: 20px;
+      }
+      #box{
+          height: 230px;
+          width: 320px;
+          border: 2px solid blue;
+          border-radius: 20px;
+          background-color: #a1da69;
+          transition:  background-color .5s,transform .5s;
+      }
+      #box p{
+          margin-left: 10px;
+      }
+      #box:hover{
+          transform: translateY(-10px);
+          background-color: rgb(104, 218, 58);
+          box-shadow:0px 2px 5px #0066cc;
+      }
+      .fa-solid{
+          color: red;
+        }
+       .container{
+        color:aqua;
+       }
+        
